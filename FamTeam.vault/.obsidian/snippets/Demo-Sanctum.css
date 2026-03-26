@@ -479,6 +479,79 @@
 }
 
 /* ============================================================
+   KANBAN — DONE COLUMN STYLING
+   ============================================================ */
+
+/* Completed checkboxes in kanban */
+.kanban-plugin__item input[type="checkbox"]:checked {
+  background-color: var(--snc-green, #42be65) !important;
+  border-color: var(--snc-green, #42be65) !important;
+}
+
+.kanban-plugin__item input[type="checkbox"]:checked::after {
+  content: "✓" !important;
+  color: #fff !important;
+  font-size: 12px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+/* Strikethrough for done items */
+.kanban-plugin__item[data-checked="true"] .kanban-plugin__item-title-wrapper {
+  text-decoration: line-through;
+  opacity: 0.6;
+}
+
+/* Mark complete when checkbox is checked */
+.kanban-plugin .task-list-item-checkbox:checked,
+.kanban-plugin input[data-task="x"]:checked {
+  background-color: var(--snc-green, #42be65) !important;
+  border-color: var(--snc-green, #42be65) !important;
+  color: #fff !important;
+}
+
+/* ============================================================
+   TASK STATUSES
+   ============================================================ */
+
+/* In progress [/] — синий */
+input[data-task="/"]:checked,
+li[data-task="/"] > .task-list-item-checkbox {
+  background-color: var(--snc-accent) !important;
+  border-color: var(--snc-accent) !important;
+}
+li[data-task="/"] > .task-list-item-checkbox::after {
+  content: "⏳";
+  font-size: 10px;
+  position: absolute;
+  top: -1px;
+  left: 1px;
+}
+li[data-task="/"] {
+  color: var(--snc-accent) !important;
+}
+
+/* Done [x] — зелёный */
+input[data-task="x"]:checked,
+li[data-task="x"] > .task-list-item-checkbox {
+  background-color: var(--snc-green) !important;
+  border-color: var(--snc-green) !important;
+}
+
+/* Cancelled [-] — серый, зачёркнутый */
+li[data-task="-"] {
+  color: var(--snc-muted) !important;
+  text-decoration: line-through;
+}
+
+/* Waiting [?] — жёлтый */
+li[data-task="?"] > .task-list-item-checkbox {
+  background-color: var(--snc-yellow) !important;
+  border-color: var(--snc-yellow) !important;
+}
+
+/* ============================================================
    SCROLLBAR
    ============================================================ */
 
