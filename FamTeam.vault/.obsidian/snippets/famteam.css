@@ -1,0 +1,226 @@
+/* === FamTeam Dashboard v3 === */
+
+/* ---- TAGS ---- */
+.tag {
+  border-radius: 12px !important;
+  padding: 2px 10px !important;
+  font-size: 11px !important;
+  font-weight: 600 !important;
+  border: none !important;
+  letter-spacing: 0.3px;
+}
+a.tag[href="#sergei"], .cm-tag-sergei { background: #dbeafe !important; color: #2563eb !important; }
+a.tag[href="#yulia"], .cm-tag-yulia { background: #fef3c7 !important; color: #d97706 !important; }
+a.tag[href="#claude"], .cm-tag-claude { background: #ede9fe !important; color: #7c3aed !important; }
+a.tag[href="#in_progress"], .cm-tag-in_progress { background: #dbeafe !important; color: #3b82f6 !important; }
+a.tag[href="#done"], .cm-tag-done { background: #d1fae5 !important; color: #059669 !important; }
+a.tag[href="#p1"], .cm-tag-p1 { background: #fee2e2 !important; color: #dc2626 !important; }
+a.tag[href="#p2"], .cm-tag-p2 { background: #fef3c7 !important; color: #d97706 !important; }
+a.tag[href="#p3"], .cm-tag-p3 { background: #e0e7ff !important; color: #4f46e5 !important; }
+
+/* ---- HEADINGS ---- */
+.markdown-preview-view h1 {
+  font-size: 32px;
+  font-weight: 800;
+  margin-top: 8px;
+  margin-bottom: 4px;
+  border-bottom: none !important;
+  letter-spacing: -0.5px;
+}
+.markdown-preview-view h2 {
+  font-size: 20px;
+  font-weight: 700;
+  margin-top: 32px;
+  margin-bottom: 12px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid #f1f5f9;
+  color: #1e293b;
+}
+.markdown-preview-view h3 {
+  font-size: 15px;
+  font-weight: 700;
+  margin-top: 20px;
+  margin-bottom: 8px;
+  color: #475569;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* ---- CALLOUTS as CARDS ---- */
+.callout {
+  border-radius: 12px !important;
+  border: 1px solid #e2e8f0 !important;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.04) !important;
+  margin: 8px 0 !important;
+  overflow: hidden;
+}
+.callout-title {
+  font-weight: 700 !important;
+  font-size: 15px !important;
+  padding: 12px 16px 8px !important;
+}
+.callout-content {
+  padding: 0 16px 12px !important;
+  font-size: 13px;
+  color: #64748b;
+}
+
+/* Project cards — custom callout types */
+.callout[data-callout="project"] {
+  background: #ffffff !important;
+  border-left: 4px solid var(--callout-color, #6366f1) !important;
+}
+.callout[data-callout="project"] .callout-title {
+  color: #1e293b !important;
+}
+.callout[data-callout="metric"] {
+  background: #f8fafc !important;
+  border: 1px solid #e2e8f0 !important;
+  border-left: none !important;
+}
+.callout[data-callout="metric"] .callout-title {
+  font-size: 28px !important;
+  font-weight: 800 !important;
+  color: #6366f1 !important;
+}
+
+/* Tip callout — team banner */
+.callout[data-callout="tip"] {
+  background: linear-gradient(135deg, #f5f3ff 0%, #ede9fe 100%) !important;
+  border: 1px solid #c4b5fd !important;
+  border-left: none !important;
+}
+
+/* Info callout — stats */
+.callout[data-callout="info"] {
+  background: #f0f9ff !important;
+  border: 1px solid #bae6fd !important;
+  border-left: none !important;
+}
+
+/* ---- TASKS ---- */
+.task-list-item-checkbox {
+  width: 18px !important;
+  height: 18px !important;
+  margin-right: 8px !important;
+  border-radius: 5px !important;
+  border: 2px solid #cbd5e1 !important;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+.task-list-item-checkbox:checked {
+  background-color: #10b981 !important;
+  border-color: #10b981 !important;
+}
+.task-list-item-checkbox:hover {
+  border-color: #6366f1 !important;
+}
+.task-list-item {
+  padding: 3px 0;
+  line-height: 1.7;
+}
+
+/* ---- DATAVIEW TABLES ---- */
+.dataview.table-view-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid #e2e8f0;
+}
+.dataview.table-view-table thead tr {
+  background: #f8fafc;
+}
+.dataview.table-view-table th {
+  font-weight: 700;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: #94a3b8;
+  padding: 10px 14px;
+  border-bottom: 2px solid #e2e8f0;
+}
+.dataview.table-view-table td {
+  padding: 10px 14px;
+  border-bottom: 1px solid #f1f5f9;
+  font-size: 14px;
+}
+.dataview.table-view-table tbody tr:hover {
+  background: #f8fafc;
+}
+
+/* ---- LINKS ---- */
+.internal-link {
+  color: #6366f1 !important;
+  text-decoration: none !important;
+  font-weight: 600;
+  border-bottom: 2px solid #e0e7ff;
+  transition: all 0.15s;
+}
+.internal-link:hover {
+  border-bottom-color: #6366f1 !important;
+}
+
+/* ---- BLOCKQUOTES ---- */
+.markdown-preview-view blockquote {
+  background: #f8fafc;
+  border-left: 4px solid #6366f1;
+  border-radius: 0 10px 10px 0;
+  padding: 12px 16px;
+  margin: 12px 0;
+  font-style: normal;
+}
+
+/* ---- HR ---- */
+.markdown-preview-view hr {
+  border: none;
+  border-top: 1px solid #f1f5f9;
+  margin: 28px 0;
+}
+
+/* ---- CODE (stack tags) ---- */
+.markdown-preview-view code:not(pre code) {
+  background: #f1f5f9;
+  color: #475569;
+  padding: 2px 8px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+/* ---- FRONTMATTER ---- */
+.frontmatter-container { display: none; }
+
+/* ---- SIDEBAR ---- */
+.nav-file-title.is-active {
+  background: #ede9fe !important;
+  color: #6366f1 !important;
+  font-weight: 600;
+  border-radius: 6px;
+}
+.nav-folder-title {
+  font-weight: 600;
+  font-size: 13px;
+}
+
+/* ---- DATAVIEW TASK GROUPS ---- */
+.dataview .task-list-basic-item {
+  font-size: 14px;
+}
+.dataview .result-group .group-header {
+  font-weight: 700;
+  color: #6366f1;
+  font-size: 14px;
+  margin-top: 12px;
+  margin-bottom: 4px;
+}
+
+/* ---- COLUMN LAYOUT (for side-by-side callouts) ---- */
+.dashboard-columns {
+  display: flex;
+  gap: 12px;
+}
+.dashboard-columns > .callout {
+  flex: 1;
+}
