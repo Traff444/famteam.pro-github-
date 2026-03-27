@@ -1,0 +1,6 @@
+{
+  "enabled": false,
+  "cronExpression": "0 3 * * *",
+  "kanban_mtime": "1774556691",
+  "last_check": "2026-03-26T20:25:41Z"
+}
