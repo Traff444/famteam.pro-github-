@@ -1,3 +1,5 @@
+import { assetUrl } from '@/lib/asset-url';
+
 const HeroSection = () => {
 
   return (
@@ -21,7 +23,7 @@ const HeroSection = () => {
         loop
         playsInline
       >
-        <source src="/video/ai-workforce-preview.mp4" type="video/mp4" />
+        <source src={assetUrl("/video/ai-workforce-preview.mp4")} type="video/mp4" />
       </video>
 
       <div className="poster-container" style={{ position: 'relative', zIndex: 1 }}>
@@ -96,7 +98,7 @@ const HeroSection = () => {
               loop
               playsInline
             >
-              <source src="/video/ai-workforce-preview.mp4" type="video/mp4" />
+              <source src={assetUrl("/video/ai-workforce-preview.mp4")} type="video/mp4" />
             </video>
           </div>
 

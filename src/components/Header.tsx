@@ -1,5 +1,6 @@
 import { useState, useCallback, useRef } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
+import { assetUrl } from '@/lib/asset-url';
 
 const PRODUCTS = [
   { num: '01', label: 'AI Receptionist', desc: 'Обрабатывает входящие и доводит до заявки', path: '/roles/receptionist' },
@@ -75,7 +76,7 @@ const Header = () => {
     <header className="sys-header">
       <div className="sys-header__main">
         <Link to="/" className="sys-logo" style={{ textDecoration: 'none', color: 'inherit' }}>
-          <img className="sys-logo__img" src="/images/logo.webp" alt="FamTeam" />
+          <img className="sys-logo__img" src={assetUrl("/images/logo.webp")} alt="FamTeam" />
           <div className="sys-logo__rule" />
           <span className="sys-logo__name">FAMTEAM</span>
         </Link>

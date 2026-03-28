@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState, useCallback } from 'react';
+import { assetUrl } from '@/lib/asset-url';
 
 /**
  * AiSystemVisual — Premium AI chat demo card
@@ -120,7 +121,7 @@ const AiSystemVisual = ({ scenario }: AiSystemVisualProps) => {
   const MascotAvatar = () => (
     <img
       className="asv__mascot"
-      src="/images/logo.webp"
+      src={assetUrl("/images/logo.webp")}
       alt="AI"
       width={32}
       height={32}

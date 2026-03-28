@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import { assetUrl } from '@/lib/asset-url';
 
 const galleryItems = [
   {
@@ -43,7 +44,7 @@ const GallerySection = () => {
               </div>
               <div className="gallery-img-clip">
                 <img
-                  src={item.img}
+                  src={assetUrl(item.img)}
                   alt={`${item.label} — ${item.sub}`}
                   className="gallery-img-wrapper"
                   loading="lazy"
