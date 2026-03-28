@@ -1,0 +1,33 @@
+# FamTeam — AI Workforce Studio
+# https://famteam.ru
+
+> FamTeam проектирует и внедряет AI-сотрудников для бизнеса.
+> AI-сотрудники обрабатывают заявки, увеличивают конверсию и создают контент.
+
+## Products
+
+- AI Receptionist: обрабатывает входящие заявки из мессенджеров и соцсетей, доводит до заявки, фиксирует в CRM
+- AI Growth Manager: анализирует воронку продаж, находит узкие места, увеличивает конверсию на 20-40%
+- AI Creator: создаёт контент для соцсетей и блогов, генерирует контент-план, увеличивает охват
+
+## Key Pages
+
+- Homepage: https://famteam.ru/
+- AI Receptionist: https://famteam.ru/roles/receptionist
+- AI Growth Manager: https://famteam.ru/roles/growth
+- AI Creator: https://famteam.ru/roles/creator
+- Contact: https://famteam.ru/contact
+
+## Facts
+
+- Founded: 2024
+- Location: Russia
+- Industry: AI SaaS / AI Workforce Automation
+- Target: service businesses with inbound leads (beauty salons, fitness clubs, clinics, education, real estate)
+- AI employees work 24/7 and integrate with CRM, messengers, and social media
+- Each AI employee operates on measurable KPIs: response time, conversion rate, lead coverage
+
+## Contact
+
+- Website: https://famteam.ru
+- CTA: https://famteam.ru/#cta
