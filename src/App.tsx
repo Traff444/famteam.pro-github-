@@ -4,6 +4,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import { HelmetProvider } from "react-helmet-async";
+import PostHogPageView from "./components/PostHogPageView";
 import Index from "./pages/Index";
 import RolePage from "./pages/RolePage";
 import Contact from "./pages/Contact";
@@ -18,6 +19,7 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
+        <PostHogPageView />
         <Routes>
           <Route path="/" element={<Index />} />
           {/* New clean URLs → redirect to existing role pages */}

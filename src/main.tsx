@@ -1,7 +1,10 @@
 import { createRoot } from "react-dom/client";
 import App from "./App.tsx";
+import { initPostHog } from "./lib/posthog.ts";
 import "./styles/typography.css";
 import "./index.css";
+
+initPostHog();
 
 // GitHub Pages SPA: restore path from 404.html redirect
 const params = new URLSearchParams(window.location.search);

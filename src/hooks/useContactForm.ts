@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { trackEvent, identifyUser } from "@/lib/posthog";
 
 interface FormData {
   name: string;
@@ -17,6 +18,11 @@ export function useContactForm() {
     setSending(true);
     setError(null);
 
+    trackEvent("form_submitted", {
+      form_location: window.location.pathname,
+      has_task: !!form.task,
+    });
+
     try {
       const FORM_ENDPOINT = "https://famteam-form.teammfamm.workers.dev";
       const res = await fetch(FORM_ENDPOINT, {
@@ -29,8 +35,11 @@ export function useContactForm() {
         throw new Error("Ошибка отправки");
       }
 
+      identifyUser(form.contact, { name: form.name });
+      trackEvent("form_success", { form_location: window.location.pathname });
       setSent(true);
     } catch {
+      trackEvent("form_error", { form_location: window.location.pathname });
       setError("Не удалось отправить. Попробуйте ещё раз.");
     } finally {
       setSending(false);
