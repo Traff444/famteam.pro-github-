@@ -18,7 +18,7 @@ export function useContactForm() {
     setError(null);
 
     try {
-      const FORM_ENDPOINT = "https://famteam-form.traff444.workers.dev";
+      const FORM_ENDPOINT = "https://famteam-form.teammfamm.workers.dev";
       const res = await fetch(FORM_ENDPOINT, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
