@@ -1,7 +1,7 @@
 import posthog from "posthog-js";
 
 const POSTHOG_KEY = "phc_8z0ArUBbl50QGK6svSsXGDgNVlwnPNhpn5z7npPzPKE";
-const POSTHOG_HOST = "https://eu.i.posthog.com";
+const POSTHOG_HOST = "https://eu.posthog.com";
 
 export function initPostHog() {
   if (typeof window === "undefined") return;
