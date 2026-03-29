@@ -17,7 +17,7 @@ const App = () => (
     <TooltipProvider>
       <Toaster />
       <Sonner />
-      <BrowserRouter basename={import.meta.env.BASE_URL}>
+      <BrowserRouter>
         <Routes>
           <Route path="/" element={<Index />} />
           {/* New clean URLs → redirect to existing role pages */}
