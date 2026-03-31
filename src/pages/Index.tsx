@@ -6,6 +6,7 @@ import VisionMissionSection from "@/components/sections/VisionMissionSection";
 import GallerySection from "@/components/sections/GallerySection";
 import SystemInAction from "@/components/sections/SystemInAction";
 import CompetitiveSection from "@/components/sections/CompetitiveSection";
+import FAQSection from "@/components/sections/FAQSection";
 import FooterSection from "@/components/sections/FooterSection";
 
 const Index = () => {
@@ -26,7 +27,9 @@ const Index = () => {
         <SystemInAction />
         {/* 5. Why FamTeam */}
         <CompetitiveSection />
-        {/* 6. CTA + Footer */}
+        {/* 6. FAQ */}
+        <FAQSection />
+        {/* 7. CTA + Footer */}
         <FooterSection />
       </main>
     </div>

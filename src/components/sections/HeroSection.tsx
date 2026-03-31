@@ -1,5 +1,3 @@
-import { assetUrl } from '@/lib/asset-url';
-
 const HeroSection = () => {
 
   return (
@@ -23,7 +21,7 @@ const HeroSection = () => {
         loop
         playsInline
       >
-        <source src={assetUrl("/video/ai-workforce-preview.mp4")} type="video/mp4" />
+        <source src="/video/ai-workforce-preview.mp4" type="video/mp4" />
       </video>
 
       <div className="poster-container" style={{ position: 'relative', zIndex: 1 }}>
@@ -67,6 +65,9 @@ const HeroSection = () => {
 
             {/* ── BOTTOM: description + CTA ── */}
             <div>
+              <p className="hero-sub" style={{ fontSize: '1rem', lineHeight: 1.5, opacity: 0.7, marginBottom: '1.5rem', maxWidth: '440px' }}>
+                AI-сотрудники для бизнеса от FamTeam. Обрабатывают заявки, ведут диалоги с клиентами и фиксируют результат в CRM. Без найма, обучения и выходных.
+              </p>
               <div className="hero-list">
                 {[
                   { n: '01', t: 'Не теряют заявки' },
@@ -98,7 +99,7 @@ const HeroSection = () => {
               loop
               playsInline
             >
-              <source src={assetUrl("/video/ai-workforce-preview.mp4")} type="video/mp4" />
+              <source src="/video/ai-workforce-preview.mp4" type="video/mp4" />
             </video>
           </div>
 
