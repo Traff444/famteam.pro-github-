@@ -6,6 +6,12 @@ const POSTHOG_HOST = "https://eu.posthog.com";
 export function initPostHog() {
   if (typeof window === "undefined") return;
 
+  // Redirect www to non-www before PostHog loads
+  if (window.location.hostname.startsWith("www.")) {
+    window.location.href = window.location.href.replace("://www.", "://");
+    return;
+  }
+
   posthog.init(POSTHOG_KEY, {
     api_host: POSTHOG_HOST,
     capture_pageview: false, // SPA — трекаем вручную
@@ -18,10 +24,16 @@ export function initPostHog() {
   });
 }
 
+// Normalize host: www.famteam.ru → famteam.ru
+function normalizedOrigin() {
+  const origin = window.location.origin;
+  return origin.replace("://www.", "://");
+}
+
 // SPA pageview — вызывать при каждом переходе
 export function trackPageView(path?: string) {
   posthog.capture("$pageview", {
-    $current_url: window.location.origin + (path || window.location.pathname),
+    $current_url: normalizedOrigin() + (path || window.location.pathname),
   });
 }
 
