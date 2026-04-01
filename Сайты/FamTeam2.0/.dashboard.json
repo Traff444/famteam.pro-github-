@@ -1,0 +1,18 @@
+{
+  "project": { "name": "Сайт FamTeam", "color": "#f59e0b", "priority": 3, "status": "active",
+    "description": "Корпоративный сайт FamTeam — AI-роли заменяющие людей. Lovable-managed.",
+    "direction": "Юля заканчивает дизайн и контент, потом деплой.",
+    "stack": "React 19, Vite, Tailwind, shadcn/ui, Supabase"
+  },
+  "milestones": [
+    { "id": "m1", "title": "Дизайн + Контент", "status": "active", "tasks": [
+      { "id": "t1", "text": "Финализация дизайна", "status": "in_progress", "owner": "yulia" },
+      { "id": "t2", "text": "Написание контента", "status": "in_progress", "owner": "yulia" },
+      { "id": "t3", "text": "Мобильная адаптация", "status": "todo", "owner": "yulia" }
+    ]},
+    { "id": "m2", "title": "Деплой", "status": "todo", "tasks": [
+      { "id": "t4", "text": "Выложить на продакшн", "status": "todo", "owner": "sergei" },
+      { "id": "t5", "text": "Проверить нужен ли бэкенд", "status": "todo", "owner": "sergei" }
+    ]}
+  ]
+}

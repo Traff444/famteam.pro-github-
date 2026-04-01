@@ -1,0 +1,103 @@
+.ai-kinetic-card {
+  /* Fill the layer-card absolutely — height driven by grid row, not this element */
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+}
+
+.ai-kinetic-card__svg {
+  width: 80%;
+  height: 80%;
+  overflow: visible;
+}
+
+/* Construction grid */
+.ai-grid line {
+  stroke: rgba(17, 17, 17, 0.09);
+  stroke-width: 1;
+  animation: gridFade 6s ease-in-out infinite;
+}
+.ai-grid line:nth-child(2) { animation-delay: 0.4s; }
+.ai-grid line:nth-child(3) { animation-delay: 0.8s; }
+.ai-grid line:nth-child(4) { animation-delay: 1.2s; }
+.ai-grid line:nth-child(5) { animation-delay: 1.6s; }
+.ai-grid line:nth-child(6) { animation-delay: 2s; }
+
+/* Base letter structure */
+.stroke-base {
+  stroke: #111111;
+  stroke-width: 4;
+  stroke-linecap: round;
+  fill: none;
+}
+
+/* Animated accent lines */
+.stroke-accent {
+  stroke: #f1642a;
+  stroke-width: 3;
+  stroke-linecap: round;
+  fill: none;
+  stroke-dasharray: 220;
+  stroke-dashoffset: 220;
+  opacity: 0;
+}
+
+.accent-1 { animation: drawAccent 5s ease-in-out infinite 0.2s; }
+.accent-2 { animation: drawAccent 5s ease-in-out infinite 0.8s; }
+.accent-3 { animation: drawAccent 5s ease-in-out infinite 1.4s; }
+.accent-4 { animation: drawAccent 5s ease-in-out infinite 2s; }
+.accent-5 { animation: drawAccent 5s ease-in-out infinite 2.6s; }
+.accent-6 { animation: drawAccent 5s ease-in-out infinite 3.2s; }
+
+/* Nodes */
+.ai-nodes .node {
+  fill: #f1642a;
+  opacity: 0.18;
+  transform-origin: center;
+}
+.node-1 { animation: nodePulse 4s ease-in-out infinite 0.2s; }
+.node-2 { animation: nodePulse 4s ease-in-out infinite 0.6s; }
+.node-3 { animation: nodePulse 4s ease-in-out infinite 1s; }
+.node-4 { animation: nodePulse 4s ease-in-out infinite 1.4s; }
+.node-5 { animation: nodePulse 4s ease-in-out infinite 1.8s; }
+.node-6 { animation: nodePulse 4s ease-in-out infinite 2.2s; }
+
+/* Micro labels */
+.ai-micro-labels text {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 10px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  fill: rgba(17, 17, 17, 0.35);
+}
+
+/* Keyframes */
+@keyframes drawAccent {
+  0%   { stroke-dashoffset: 220; opacity: 0; }
+  20%  { opacity: 0.95; }
+  50%  { stroke-dashoffset: 0; opacity: 0.95; }
+  75%  { opacity: 0.3; }
+  100% { stroke-dashoffset: -220; opacity: 0; }
+}
+
+@keyframes nodePulse {
+  0%, 100% { opacity: 0.18; transform: scale(1); }
+  50%       { opacity: 0.85; transform: scale(1.18); }
+}
+
+@keyframes gridFade {
+  0%, 100% { opacity: 0.25; }
+  50%       { opacity: 0.08; }
+}
+
+@media (max-width: 1024px) {
+  .ai-kinetic-card__svg {
+    width: 84%;
+    height: 84%;
+  }
+  .stroke-base   { stroke-width: 3.2; }
+  .stroke-accent { stroke-width: 2.4; }
+}

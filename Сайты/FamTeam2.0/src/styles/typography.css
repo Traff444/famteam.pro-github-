@@ -1,0 +1,209 @@
+/* =============================================================
+   TYPOGRAPHY SYSTEM — FamTeam
+   Editorial · Newspaper · Tech · Architecture · Minimalism
+   ============================================================= */
+
+/* ── Fonts ── */
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=JetBrains+Mono:wght@400;500;600&family=Manrope:wght@400;500;600;700&display=swap');
+
+/* ── Typography tokens ── */
+:root {
+  /* Families */
+  --font-heading: "Anton", sans-serif;
+  --font-body:    "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-tech:    "JetBrains Mono", monospace;
+  --font-ui:      "Manrope", "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+  /* Sizes — desktop */
+  --fs-h1:       96px;
+  --fs-h2:       48px;
+  --fs-h3:       32px;
+  --fs-body:     18px;
+  --fs-body-sm:  16px;
+  --fs-tech:     12px;
+  --fs-button:   18px;
+
+  /* Line heights */
+  --lh-h1:     0.95;
+  --lh-h2:     1;
+  --lh-h3:     1;
+  --lh-body:   1.5;
+  --lh-tech:   1.4;
+  --lh-button: 1.2;
+
+  /* Letter spacing */
+  --ls-h1:     -0.01em;
+  --ls-h2:     0;
+  --ls-h3:     0;
+  --ls-body:   0;
+  --ls-tech:   0.08em;
+  --ls-button: 0;
+
+  /* Weights */
+  --fw-heading:      400;
+  --fw-body:         400;
+  --fw-body-strong:  600;
+  --fw-tech:         500;
+  --fw-button:       600;
+}
+
+/* ── Tablet ── */
+@media (max-width: 1024px) {
+  :root {
+    --fs-h1:      64px;
+    --fs-h2:      36px;
+    --fs-h3:      28px;
+    --fs-body:    18px;
+    --fs-body-sm: 15px;
+    --fs-button:  17px;
+  }
+}
+
+/* ── Mobile ── */
+@media (max-width: 768px) {
+  :root {
+    --fs-h1:      40px;
+    --fs-h2:      28px;
+    --fs-h3:      24px;
+    --fs-body:    16px;
+    --fs-body-sm: 14px;
+    --fs-button:  16px;
+    --fs-tech:    11px;
+  }
+}
+
+/* ── Rendering ── */
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+/* ── Headings ── */
+h1, h2, h3,
+.heading, .heading-1, .heading-2, .heading-3 {
+  margin: 0;
+  font-family: var(--font-heading);
+  font-weight: var(--fw-heading);
+  text-transform: uppercase;
+  color: inherit;
+}
+
+h1, .heading-1 {
+  font-size: var(--fs-h1);
+  line-height: var(--lh-h1);
+  letter-spacing: var(--ls-h1);
+}
+
+h2, .heading-2 {
+  font-size: var(--fs-h2);
+  line-height: var(--lh-h2);
+  letter-spacing: var(--ls-h2);
+}
+
+h3, .heading-3 {
+  font-size: var(--fs-h3);
+  line-height: var(--lh-h3);
+  letter-spacing: var(--ls-h3);
+}
+
+/* ── Body ── */
+p, .body-text {
+  margin: 0;
+  font-family: var(--font-body);
+  font-size: var(--fs-body);
+  line-height: var(--lh-body);
+  font-weight: var(--fw-body);
+  letter-spacing: var(--ls-body);
+}
+
+.body-text-sm, small {
+  font-family: var(--font-body);
+  font-size: var(--fs-body-sm);
+  line-height: var(--lh-body);
+  font-weight: var(--fw-body);
+}
+
+strong, b, .body-strong {
+  font-weight: var(--fw-body-strong);
+}
+
+/* ── Technical / system labels ── */
+.tech-label,
+.index-label,
+.ui-label,
+.kicker,
+.meta-text {
+  /* .system-label is defined separately in index.css with custom overrides */
+  font-family: var(--font-tech);
+  font-size: var(--fs-tech);
+  line-height: var(--lh-tech);
+  letter-spacing: var(--ls-tech);
+  text-transform: uppercase;
+  font-weight: var(--fw-tech);
+}
+
+.tech-label--muted,
+.index-label--muted,
+.meta-text--muted {
+  opacity: 0.6;
+}
+
+/* ── Buttons ── */
+button, .button, .btn {
+  font-family: var(--font-body);
+  font-size: var(--fs-button);
+  line-height: var(--lh-button);
+  font-weight: var(--fw-button);
+  letter-spacing: var(--ls-button);
+}
+
+/* ── Utility classes ── */
+.font-heading { font-family: var(--font-heading) !important; }
+.font-body    { font-family: var(--font-body)    !important; }
+.font-tech    { font-family: var(--font-tech)    !important; }
+
+.text-h1 {
+  font-family: var(--font-heading);
+  font-size: var(--fs-h1);
+  line-height: var(--lh-h1);
+  letter-spacing: var(--ls-h1);
+  text-transform: uppercase;
+}
+.text-h2 {
+  font-family: var(--font-heading);
+  font-size: var(--fs-h2);
+  line-height: var(--lh-h2);
+  letter-spacing: var(--ls-h2);
+  text-transform: uppercase;
+}
+.text-h3 {
+  font-family: var(--font-heading);
+  font-size: var(--fs-h3);
+  line-height: var(--lh-h3);
+  letter-spacing: var(--ls-h3);
+  text-transform: uppercase;
+}
+.text-body {
+  font-family: var(--font-body);
+  font-size: var(--fs-body);
+  line-height: var(--lh-body);
+}
+.text-body-sm {
+  font-family: var(--font-body);
+  font-size: var(--fs-body-sm);
+  line-height: var(--lh-body);
+}
+.text-tech {
+  font-family: var(--font-tech);
+  font-size: var(--fs-tech);
+  line-height: var(--lh-tech);
+  letter-spacing: var(--ls-tech);
+  text-transform: uppercase;
+}
+.text-button {
+  font-family: var(--font-body);
+  font-size: var(--fs-button);
+  line-height: var(--lh-button);
+  font-weight: var(--fw-button);
+}
