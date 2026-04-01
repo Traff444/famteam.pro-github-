@@ -15,6 +15,7 @@ const ROUTES = [
   '/contact',
   '/blog',
   '/blog/chat-bot-vs-ai-sotrudnik',
+  '/blog/ai-sotrudnik-kejsy-vnedrenie',
 ];
 
 async function prerender() {

@@ -10,6 +10,7 @@ import RolePage from "./pages/RolePage";
 import Contact from "./pages/Contact";
 import BlogIndex from "./pages/blog/BlogIndex";
 import ChatBotVsAiSotrudnik from "./pages/blog/ChatBotVsAiSotrudnik";
+import AiSotrudnikKejsyVnedrenie from "./pages/blog/AiSotrudnikKejsyVnedrenie";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -33,6 +34,7 @@ const App = () => (
           {/* Blog */}
           <Route path="/blog" element={<BlogIndex />} />
           <Route path="/blog/chat-bot-vs-ai-sotrudnik" element={<ChatBotVsAiSotrudnik />} />
+          <Route path="/blog/ai-sotrudnik-kejsy-vnedrenie" element={<AiSotrudnikKejsyVnedrenie />} />
           {/* Contact */}
           <Route path="/contact" element={<Contact />} />
           {/* Catch-all */}

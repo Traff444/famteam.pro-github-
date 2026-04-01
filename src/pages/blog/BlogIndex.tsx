@@ -5,6 +5,15 @@ import { assetUrl } from "@/lib/asset-url";
 
 const ARTICLES = [
   {
+    slug: "ai-sotrudnik-kejsy-vnedrenie",
+    title: "AI-сотрудник для бизнеса: кейсы с ROI и внедрение за 3 дня",
+    description:
+      "Кейсы внедрения AI-сотрудника с расчётом ROI. Как выбрать решение, избежать ошибок и запустить без разработчика за 3 дня.",
+    image: "/blog/images/vis1-hero-kejsy.webp",
+    date: "1 апреля 2026",
+    readingTime: "12 мин",
+  },
+  {
     slug: "chat-bot-vs-ai-sotrudnik",
     title: "Чат-бот vs AI-сотрудник: в чём разница для салона, клиники и школы",
     description:
