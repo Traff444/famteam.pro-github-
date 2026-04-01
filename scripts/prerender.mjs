@@ -13,6 +13,8 @@ const ROUTES = [
   '/roles/growth',
   '/roles/creator',
   '/contact',
+  '/blog',
+  '/blog/chat-bot-vs-ai-sotrudnik',
 ];
 
 async function prerender() {

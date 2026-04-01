@@ -16,7 +16,13 @@
 - AI Receptionist: https://famteam.ru/roles/receptionist
 - AI Growth Manager: https://famteam.ru/roles/growth
 - AI Creator: https://famteam.ru/roles/creator
+- Blog: https://famteam.ru/blog
 - Contact: https://famteam.ru/contact
+
+## Blog
+
+- Чат-бот vs AI-сотрудник: в чём разница для салона, клиники и школы: https://famteam.ru/blog/chat-bot-vs-ai-sotrudnik
+  Сравнение чат-бота и AI-сотрудника для салонов, клиник и онлайн-школ. Таблица отличий, примеры диалогов и ROI по нишам.
 
 ## Facts
 

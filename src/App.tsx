@@ -8,6 +8,8 @@ import PostHogPageView from "./components/PostHogPageView";
 import Index from "./pages/Index";
 import RolePage from "./pages/RolePage";
 import Contact from "./pages/Contact";
+import BlogIndex from "./pages/blog/BlogIndex";
+import ChatBotVsAiSotrudnik from "./pages/blog/ChatBotVsAiSotrudnik";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -28,6 +30,9 @@ const App = () => (
           <Route path="/ai-creator" element={<Navigate to="/roles/creator" replace />} />
           {/* Existing role pages */}
           <Route path="/roles/:slug" element={<RolePage />} />
+          {/* Blog */}
+          <Route path="/blog" element={<BlogIndex />} />
+          <Route path="/blog/chat-bot-vs-ai-sotrudnik" element={<ChatBotVsAiSotrudnik />} />
           {/* Contact */}
           <Route path="/contact" element={<Contact />} />
           {/* Catch-all */}

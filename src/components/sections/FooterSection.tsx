@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { useContactForm } from '@/hooks/useContactForm';
 
 const FOOTER_LINKS = [
@@ -122,6 +123,7 @@ const FooterSection = () => {
                   {l.label}
                 </a>
               ))}
+              <Link to="/blog" className="site-footer__link">Блог</Link>
             </nav>
           </div>
           <div className="site-footer__copy">FamTeam © 2025</div>

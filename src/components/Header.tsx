@@ -12,6 +12,7 @@ const NAV_ITEMS = [
   { id: 'about', label: 'ЧТО ЭТО' },
   { id: 'products', label: 'ПРОДУКТЫ' },
   { id: 'system', label: 'КАК ЭТО РАБОТАЕТ' },
+  { id: 'blog', label: 'БЛОГ', href: '/blog' },
   { id: 'cta', label: 'КОНТАКТЫ' },
 ] as const;
 
@@ -82,10 +83,10 @@ const Header = () => {
         </Link>
 
         <nav className="sys-nav">
-          {NAV_ITEMS.map(({ id, label }) =>
-            id === 'products' ? (
+          {NAV_ITEMS.map((item) =>
+            item.id === 'products' ? (
               <div
-                key={id}
+                key={item.id}
                 className="sys-nav__dropdown"
                 onMouseEnter={handleEnter}
                 onMouseLeave={handleLeave}
@@ -95,7 +96,7 @@ const Header = () => {
                   className={`sys-nav__tab${productsOpen ? ' sys-nav__tab--active' : ''}`}
                   onClick={() => scrollToSection('products')}
                 >
-                  {label}
+                  {item.label}
                 </button>
                 {productsOpen && (
                   <div className={`sys-nav__menu${productsVisible ? ' sys-nav__menu--visible' : ''}`}>
@@ -116,14 +117,23 @@ const Header = () => {
                   </div>
                 )}
               </div>
+            ) : 'href' in item ? (
+              <Link
+                key={item.id}
+                to={(item as { href: string }).href}
+                className="sys-nav__tab"
+                style={{ textDecoration: 'none', color: 'inherit' }}
+              >
+                {item.label}
+              </Link>
             ) : (
               <button
-                key={id}
+                key={item.id}
                 type="button"
                 className="sys-nav__tab"
-                onClick={() => scrollToSection(id)}
+                onClick={() => scrollToSection(item.id)}
               >
-                {label}
+                {item.label}
               </button>
             )
           )}
@@ -139,15 +149,15 @@ const Header = () => {
       </div>
 
       <div className={`sys-mobile-nav${mobileOpen ? ' sys-mobile-nav--open' : ''}`}>
-        {NAV_ITEMS.map(({ id, label }) =>
-          id === 'products' ? (
-            <div key={id} className="sys-mobile-nav__group">
+        {NAV_ITEMS.map((item) =>
+          item.id === 'products' ? (
+            <div key={item.id} className="sys-mobile-nav__group">
               <button
                 type="button"
                 className="sys-mobile-nav__item"
                 onClick={() => scrollToSection('products')}
               >
-                {label}
+                {item.label}
               </button>
               <div className="sys-mobile-nav__sub">
                 {PRODUCTS.map(p => (
@@ -163,14 +173,24 @@ const Header = () => {
                 ))}
               </div>
             </div>
+          ) : 'href' in item ? (
+            <Link
+              key={item.id}
+              to={(item as { href: string }).href}
+              className="sys-mobile-nav__item"
+              style={{ textDecoration: 'none', color: 'inherit' }}
+              onClick={() => setMobileOpen(false)}
+            >
+              {item.label}
+            </Link>
           ) : (
             <button
-              key={id}
+              key={item.id}
               type="button"
               className="sys-mobile-nav__item"
-              onClick={() => scrollToSection(id)}
+              onClick={() => scrollToSection(item.id)}
             >
-              {label}
+              {item.label}
             </button>
           )
         )}

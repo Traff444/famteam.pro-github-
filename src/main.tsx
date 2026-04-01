@@ -2,6 +2,7 @@ import { createRoot } from "react-dom/client";
 import App from "./App.tsx";
 import { initPostHog } from "./lib/posthog.ts";
 import "./styles/typography.css";
+import "./styles/blog.css";
 import "./index.css";
 
 initPostHog();
