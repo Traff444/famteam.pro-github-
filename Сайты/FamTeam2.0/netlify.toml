@@ -1,6 +1,9 @@
 [build]
-  command = "bun run build:no-prerender"
+  command = "bun run build:no-prerender && node scripts/postbuild-domain.mjs"
   publish = "dist"
+
+[build.environment]
+  SITE_URL = "https://famteam.pro"
 
 [[redirects]]
   from = "/*"
